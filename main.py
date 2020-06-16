@@ -50,6 +50,15 @@ def main():
       try:
         if words[0] == "exit" or words[0] == "quit":
           return
+        elif words[0] == "help" or words[0] == "h":
+          print("Available commands:")
+          print("set <parameter> <value> - sets a simulation parameter")
+          print("forces - lists the forces")
+          print("forces add <x value> <z value> - adds a force")
+          print("forces remove <index> - removes a force")
+          print("quit or exit - exits the application")
+          user_input = ""
+          continue
         elif words[0] == "set":
           if words_count != 3:
             print("Incorrect format. It's \"set <parameter> <value>\"")
